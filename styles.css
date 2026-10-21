@@ -98,58 +98,6 @@ a {
   border-radius: 2px;
 }
 
-.nav-contact span {
-  margin-left: 7px;
-}
-
-.arrow-icon {
-  position: relative;
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  flex: 0 0 14px;
-  color: currentColor;
-  vertical-align: middle;
-}
-
-.arrow-icon::before,
-.arrow-icon::after {
-  position: absolute;
-  display: block;
-  content: "";
-}
-
-.arrow-icon::before {
-  top: 50%;
-  left: 1px;
-  width: 10px;
-  height: 1.5px;
-  background: currentColor;
-  transform: translateY(-50%);
-}
-
-.arrow-icon::after {
-  top: 50%;
-  right: 1px;
-  width: 6px;
-  height: 6px;
-  border-top: 1.5px solid currentColor;
-  border-right: 1.5px solid currentColor;
-  transform: translateY(-50%) rotate(45deg);
-}
-
-.arrow-icon--up-right {
-  transform: rotate(-45deg);
-}
-
-.arrow-icon--down {
-  transform: rotate(90deg);
-}
-
-.arrow-icon--up {
-  transform: rotate(-90deg);
-}
-
 .hero {
   position: relative;
   display: grid;
@@ -280,105 +228,52 @@ h2 em {
 
 .hero-art {
   position: relative;
-  width: min(100%, 430px);
-  aspect-ratio: 1;
+  width: min(100%, 370px);
+  height: 310px;
   justify-self: end;
 }
 
-.art-orbit {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: 1px solid rgba(52, 92, 70, 0.18);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) rotate(-28deg);
-}
-
-.orbit-one {
-  width: 88%;
-  height: 62%;
-}
-
-.orbit-two {
-  width: 73%;
-  height: 100%;
-  transform: translate(-50%, -50%) rotate(34deg);
-}
-
-.art-sun {
-  position: absolute;
-  top: 11%;
-  right: 15%;
-  width: 49px;
-  height: 49px;
-  border-radius: 50%;
-  background: var(--lime);
-}
-
 .art-card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   display: flex;
-  width: 68%;
-  height: 69%;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
-  padding: 12% 11%;
+  padding: 38px;
   background: var(--green);
   box-shadow: 0 25px 60px rgba(37, 70, 53, 0.15);
   color: var(--white);
-  transform: translate(-50%, -50%) rotate(-5deg);
 }
 
 .art-card-label,
 .art-card-footer {
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
 }
 
 .art-card-label {
-  margin-bottom: 23px;
-  color: #d0dfa5;
+  margin-bottom: 24px;
+  color: var(--lime);
 }
 
 .art-card-title {
   font-family: var(--serif);
-  font-size: clamp(34px, 4vw, 51px);
+  font-size: 42px;
   line-height: 1.08;
 }
 
 .art-card-line {
-  width: 35px;
+  width: 42px;
   height: 1px;
-  margin: 23px 0 16px;
+  margin: 25px 0 17px;
   background: rgba(255, 255, 255, 0.55);
 }
 
 .art-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 7px;
-  letter-spacing: 0.04em;
-}
-
-.art-card-footer span {
-  color: var(--lime);
-}
-
-.art-caption {
-  position: absolute;
-  right: -2%;
-  bottom: 8%;
-  color: var(--muted);
-  font-size: 9px;
-  line-height: 1.7;
-  letter-spacing: 0.1em;
-  text-align: right;
-  text-transform: uppercase;
+  font-size: 8px;
+  letter-spacing: 0.08em;
 }
 
 .section-wrap {
@@ -427,7 +322,7 @@ h2 em {
 
 .service-card {
   display: grid;
-  grid-template-columns: 74px 1fr 30px;
+grid-template-columns: 74px 1fr;
   gap: 15px;
   align-items: start;
   padding: 28px 5px 31px;
@@ -456,12 +351,6 @@ h2 em {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.8;
-}
-
-.service-arrow {
-  padding-top: 2px;
-  color: var(--green);
-  font-size: 19px;
 }
 
 .about {
@@ -579,11 +468,6 @@ h2 em {
   transform: rotate(9deg);
 }
 
-.contact-stamp b {
-  margin-left: 5px;
-  font-size: 16px;
-}
-
 .site-footer {
   min-height: 102px;
   padding: 20px 8.3%;
@@ -648,8 +532,8 @@ h2 em {
   }
 
   .hero {
+    display: block;
     min-height: initial;
-    grid-template-columns: 1fr 0.76fr;
     padding: 82px 7% 76px;
   }
 
@@ -658,7 +542,7 @@ h2 em {
   }
 
   .hero-art {
-    width: 100%;
+    margin: 42px auto 0;
   }
 
   .section-wrap {
@@ -731,13 +615,11 @@ h2 em {
   }
 
   .button {
-    gap: 11px;
     padding: 0 14px;
     font-size: 11px;
   }
 
   .text-link {
-    gap: 6px;
     font-size: 11px;
   }
 
@@ -747,38 +629,21 @@ h2 em {
 
   .hero-art {
     width: 100%;
-    max-width: 360px;
+    max-width: 370px;
+    height: 250px;
     margin: 34px auto 0;
-    aspect-ratio: 1.08;
   }
 
   .art-card {
-    width: 88%;
-    height: auto;
-    aspect-ratio: 1.35;
-    padding: 10%;
-    transform: translate(-50%, -50%) rotate(-3deg);
+    padding: 28px;
   }
 
   .art-card-label {
-    margin-bottom: 14px;
     font-size: 9px;
   }
 
   .art-card-title {
-    font-size: clamp(34px, 10vw, 42px);
-  }
-
-  .art-card-line {
-    margin: 15px 0 12px;
-  }
-
-  .art-card-footer {
-    font-size: 8px;
-  }
-
-  .art-caption {
-    display: none;
+    font-size: 38px;
   }
 
   .section-wrap {
@@ -808,7 +673,7 @@ h2 em {
   }
 
   .service-card {
-    grid-template-columns: 39px 1fr 18px;
+    grid-template-columns: 39px 1fr;
     gap: 8px;
     padding: 23px 0 25px;
   }
